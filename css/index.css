@@ -1,0 +1,48 @@
+@keyframes my-animat{
+    to{
+        box-shadow: 0 0 0 0 #fff;
+    }
+    from{
+        box-shadow: 0 0 0.3rem 0.3rem #fff; 
+    }
+}
+body{
+    background:url("../img/bg6.jpg") no-repeat;
+    background-size: cover;
+    font-family: youyuan,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.title a{
+    font-size: 3.3rem;
+}
+.nav{
+    padding: 5rem;
+}
+.nav li{
+    display: flex;
+    align-items:center;
+    text-align: center;
+}
+.nav li a{
+    display: block;
+}
+.content img{
+    widows: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: my-animat 1s infinite alternate;
+}
+.content h2{
+    color:#fff;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
+.content p{
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem
+}
+.content hr{
+    color:rgba(255,255,255,0.5);
+    margin-bottom:1.5rem; 
+}
