@@ -50,17 +50,29 @@ header nav ul li:nth-child(1){
     box-shadow:0 0 50px 3px rgb(248, 143, 5) inset;
     animation: t_b_float 2s linear alternate infinite;
 }
+header nav ul li:nth-child(1):hover{
+    animation-play-state: paused;
+}
 header nav ul li:nth-child(2){
     margin-top:3rem; 
     box-shadow: 0 0 50px 3px rgb(250, 6, 27) inset;
     animation: b_t_float 2s linear alternate infinite;
 }
+header nav ul li:nth-child(2):hover{
+    animation-play-state: paused;
+}
 header nav ul li:nth-child(3){
     box-shadow: 0 0 50px 3px rgb(4, 201, 250) inset;
     animation: t_b_float 2s linear alternate infinite;
+}
+header nav ul li:nth-child(3):hover{
+    animation-play-state: paused;
 }
 header nav ul li:nth-child(4){
     margin-top:3rem; 
     box-shadow: 0 0 50px 3px rgb(47, 248, 6) inset;
     animation: b_t_float 2s linear alternate infinite;
+}
+header nav ul li:nth-child(4):hover{
+    animation-play-state: paused;
 }
