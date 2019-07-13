@@ -1,36 +1,71 @@
 @keyframes my-animat{
-    to{
+    0%{
         box-shadow: 0 0 0 0 #fff;
     }
-    from{
+    100%{
         box-shadow: 0 0 0.3rem 0.3rem #fff; 
-    }
+    }   
 }
 body{
     background:url("../img/bg6.jpg") no-repeat;
     background-size: cover;
     font-family: youyuan,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-.title a{
+/*导航栏区域*/
+header{
+    margin: 3rem 2rem;
+}
+nav span{
+    display:inline-block;
     font-size: 3.3rem;
+    color: #fff;
 }
-.nav{
-    padding: 5rem;
-}
-.nav li{
+nav .nav{
+    flex-grow: 1;
     display: flex;
-    align-items:center;
+    margin: 0 2rem;
+}
+nav .nav li{
+    width:20%;
     text-align: center;
+    padding:0 1.5rem;
 }
-.nav li a{
+nav .nav li a{
     display: block;
+    height: 100%;
+    padding: 15% 0;
+    transition: all 0.5s;
 }
+nav .nav li a:hover{
+    color:#1e7be6e3;;
+    text-shadow:1px 2px 2px #1e7be6e3;
+}
+/*水平线的过渡*/
+nav .nav li a:hover:after{ 
+    width:100%;
+}
+/*a标签下的水平线*/
+nav .nav li a:after{
+    content: '';
+    display: block;
+    border-bottom: 2px solid #1e7be6e3;
+    margin-top:1rem; 
+    width:0;
+    transition: width 0.5s;
+}
+/*内容区*/
 .content img{
-    widows: 4rem;
+    width: 4rem;
     height:4rem;
     border-radius: 50%;
     margin: 0 auto;
-    animation: my-animat 1s infinite alternate;
+    animation: my-animat 1.5s infinite alternate;
+    transition: transform 2s;
+}
+.content img:hover{
+    transform: rotateY(180deg);
+    animation-play-state: paused;
+    background: rgba(0,0,0,0.5);
 }
 .content h2{
     color:#fff;
@@ -45,4 +80,15 @@ body{
 .content hr{
     color:rgba(255,255,255,0.5);
     margin-bottom:1.5rem; 
+}
+#d1,#d2{
+    display: none;
+    transition: 1s;
+}
+#d1:target{
+    display:block;
+}
+#d2:target{
+    display:block; 
+     
 }
